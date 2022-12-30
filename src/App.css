@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Amaranth&family=Montserrat&family=Qwitcher+Grypen:wght@700&family=Satisfy&family=Tiro+Kannada:ital@1&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Abel&family=Amaranth&family=Montserrat&family=Qwitcher+Grypen:wght@700&family=Satisfy&family=Tiro+Kannada:ital@1&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+
+
+body{
+  font-family: 'Satisfy', cursive;
+background-color: #FF3CAC;
+background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+  margin: 0;
+}
+
+/* navbar styling */
+.nav{
+  align-items: center;
+/*   background-color: #131a26; */
+/*   height: 90px; */
+  padding:30px 25px;
+  max-width: 150px;
+  display: grid;
+  grid-template-column: 2fr 2fr;
+  color: white;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+/* homepage styling */
+.note {
+  text-align: center;
+  vertical-align: center;
+  line-height: 60vh;
+  color: white;
+  font-size: 70px
+} 
+
+.notes{
+  text-align:center;
+  color: white;
+  font-size:30px;
+}
+
+.error{
+   text-align:center;
+  color: white;
+  font-size:30px;
+}
+
+/* user page styling */
+.container{
+  text-align:center;
+  font-family: 'Amaranth', san-serif;
+}
+
+.image{
+  border-radius: 50px;
+}
+
+.number{
+  padding:10px;
+   text-align:center;
+  color: white;
+  font-size: 10px;
+  background-color:blue;
+  cursor: pointer;
+  margin-left: 30px;
+  border-radius: 10px;
+}
+.number:hover {
+  padding: 5px;
+  background-color: #7979fb;
+}
+
+span{
+  padding:20px;
+}
+
+  .num{
+    justify-content: center;
+    line-height: 20vh;
+    vertical-align: center;
+  }
+
