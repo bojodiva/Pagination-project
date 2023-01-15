@@ -11,7 +11,7 @@ class Home extends Component {
       posts: [],
       loading: false,
       currentPage: 1,
-      postsPerPage: 10,
+      postsPerPage: 20,
     }
   }
 
@@ -25,6 +25,20 @@ class Home extends Component {
       loading: true
     })
   })
+  }
+
+  handleDecrement = () => {
+    if (this.state.currentPage > 1) {
+       this.setState({currentPage: this.state.currentPage - 1})
+    }
+    
+  }
+
+  handleIncrement = () => {
+    if ((this.state.currentPage * this.state.postsPerPage) < this.state.posts.length) {
+       this.setState({currentPage: this.state.currentPage + 1})
+    }
+    
   }
 
   
@@ -66,17 +80,17 @@ class Home extends Component {
              <p className='email'>{post.email}</p>
 
             <img className="image" src={post.picture.medium} alt={post.name.first}/>
-             <hr></hr>
+             
             </div>
-      ))};
-          <div>
-     <span className="number" onClick={() => {setPage(currentPage - 1)}}>Prev</span>
+      ))}
+          <div className="page--link">
+     <div className="number" onClick={this.handleDecrement}>Prev</div>
            { 
-              pageNos.map((pageNo, index) => (  <span   key={index} className="number" onClick={() => {setPage(pageNo)}}>
+              pageNos.map((pageNo, index) => (  <div  key={index} className="number" onClick={() => {setPage(pageNo)}}>
                 {pageNo}
-       </span>    
+       </div>    
           ))}
-            <span className="number" onClick={() => {setPage(currentPage + 1)}}>Next</span>
+            <div className="number" onClick={this.handleIncrement}>Next</div>
          
         </div>
 
